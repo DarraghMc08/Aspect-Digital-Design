@@ -1,2 +1,227 @@
-# Aspect-Digital-Design
-Web Developing company
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aspect Digital Design | Modern Web Studio</title>
+    <style>
+        /* CSS Variables for Dark Mode Theme */
+        :root {
+            --bg-color: #0A0A0A;
+            --surface-color: #171717;
+            --text-primary: #FFFFFF;
+            --text-secondary: #A3A3A3;
+            --accent-color: #F8FAF0; /* Crisp Off-white for high contrast */
+            --accent-glow: rgba(255, 255, 255, 0.1);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Global Reset & Typography */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Generous White Space & Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+
+        section {
+            padding: 120px 0;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 5%;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .btn {
+            background: transparent;
+            color: var(--text-primary);
+            border: 1px solid var(--text-secondary);
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background: var(--text-primary);
+            color: var(--bg-color);
+        }
+
+        .btn-primary {
+            background: var(--text-primary);
+            color: var(--bg-color);
+            border: none;
+            padding: 16px 32px;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .btn-primary:hover {
+            background: var(--text-secondary);
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 6vw, 5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -2px;
+            margin-bottom: 24px;
+            max-width: 900px;
+        }
+
+        .hero p {
+            font-size: clamp(1.1rem, 2vw, 1.3rem);
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin-bottom: 40px;
+        }
+
+        /* 3-Step Workflow Section */
+        .workflow {
+            background-color: var(--surface-color);
+            border-radius: 24px;
+            padding: 80px 5%;
+            margin: 0 5%;
+        }
+
+        .section-header {
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .step-card {
+            padding: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            background: var(--bg-color);
+            transition: var(--transition);
+        }
+
+        .step-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        .step-number {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            font-family: monospace;
+        }
+
+        .step-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+        }
+
+        .step-card p {
+            color: var(--text-secondary);
+            font-size: 1rem;
+        }
+
+        /* Footer/CTA Section */
+        .cta-section {
+            text-align: center;
+            padding: 150px 0;
+        }
+
+        .cta-section h2 {
+            font-size: 3rem;
+            margin-bottom: 30px;
+            letter-spacing: -1px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Aspect.</div>
+    </nav>
+
+    <section class="hero container">
+        <h1>Digital design that commands attention.</h1>
+        <p>We are a specialized web design studio crafting sleek, high-performing websites for modern brands. Beautiful aesthetics meets flawless functionality.</p>
+        <a href="#workflow" class="btn btn-primary">See How We Work</a>
+    </section>
+
+    <div class="workflow" id="workflow">
+        <div class="section-header">
+            <h2>A simple path to a powerful website.</h2>
+        </div>
+        <div class="steps-grid">
+            
+            <div class="step-card">
+                <div class="step-number">01 // Discover</div>
+                <h3>Strategy & Architecture</h3>
+                <p>We start by understanding your brand goals. We map out the user journey, wireframe the core structure, and establish a rock-solid foundation for the build.</p>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">02 // Design</div>
+                <h3>Visuals & Interaction</h3>
+                <p>This is where your brand comes alive. We craft a sleek, high-contrast visual identity and design smooth, intuitive interactions that keep users engaged.</p>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">03 // Develop</h3>
+                <h3>Build & Launch</h3>
+                <p>We translate the design into clean, fast, and responsive code. After rigorous testing across all devices, we hand over the keys to your new digital home.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <section class="cta-section container" id="contact">
+    <h2>Ready to elevate your digital presence?</h2>
+    <a href="mailto: darraghmcmahon08@gmail.com" class="btn btn-primary">Start Your Project</a>
+</section>
+</body>
+</html>
